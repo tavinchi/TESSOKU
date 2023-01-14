@@ -15,10 +15,10 @@ int main(){
 	sum.at(0)=0;
 	rep(i,N){
 		sum[i]=a[i]+sum[i-1];
-		a[i]=sum[i];
+		a[i]=sum[i];	//いらん
 	}
 
 	rep(i,Q){
-		cout <<a[R[i]]-a[L[i]-1]<<endl;
+		cout <<sum[R[i]]-sum[L[i]-1]<<endl;
 	}	
 }
